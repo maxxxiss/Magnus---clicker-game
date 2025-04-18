@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnus Clicker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: white;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    button {
+      background-color: #ff4757;
+      border: none;
+      color: white;
+      font-size: 20px;
+      padding: 15px 30px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #e84118;
+    }
+    .score {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Magnus Clicker</div>
+    <div class="score" id="score">0</div>
+    <button onclick="increaseScore()">Click Magnus!</button>
+  </div>
+
+  <script>
+    let score = 0;
+
+    function increaseScore() {
+      score++;
+      document.getElementById('score').innerText = score;
+    }
+  </script>
+</body>
+</html>
+
